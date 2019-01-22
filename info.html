@@ -28,8 +28,33 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 	<script>
-	window.LanguagesPath = 'assets/languages.json';
-	document.addEventListener("DOMContentLoaded", function() {		
+	document.addEventListener("DOMContentLoaded", function() {
+		window.LanguageEntries = {
+			'es':{
+				'menu_home':'Inicio',
+				'menu_about':'Conóceme',
+				'menu_services':'Mis habilidades',
+				'menu_resume':'Mi experiencia',
+				'menu_work':'Mis resultados',
+				'menu_contact':'Contáctame'
+				},
+			'en':{
+				'menu_home':'Home',
+				'menu_about':'About',
+				'menu_services':'Services',
+				'menu_resume':'Resume',
+				'menu_work':'Work',
+				'menu_contact':'Contact'
+				},
+			'cat':{
+				'menu_home':'Inici',
+				'menu_about':'Coneix',
+				'menu_services':'Les meves habilitats',
+				'menu_resume':'La meva experiència',
+				'menu_work':'Els meus resultats',
+				'menu_contact':'Contáctame'
+				}
+		};
 		var current = new URLSearchParams(window.location.search).get('culture');
 		if(!current) current='es';
 			window.Languages.Select(current);
